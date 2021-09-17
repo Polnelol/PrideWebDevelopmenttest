@@ -1,0 +1,64 @@
+$blue-btn-default: #1A45DB;
+$blue-btn-hover:   #173DC2;
+$blue-btn-active:  #1435A8;
+
+$grey-btn-default: #F8F8F8;
+$grey-btn-hover:   #F2F2F2;;
+$grey-btn-active:  #EDEDED;;
+
+$addtocart-text:   #FFFFFF;
+
+button {
+    border: none;
+    padding: none;
+    cursor: pointer;
+    color: $addtocart-text;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.addtocart__btn {
+    width: 156px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 44px;
+    font-weight: 500;
+    background-color: $blue-btn-default;
+    &:hover {
+        background-color: $blue-btn-hover;
+    }
+    &:active {
+        background-color: $blue-btn-active;
+    }
+}
+
+.addtocart_control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 36px;
+    font-weight: 400;
+    color: $blue-btn-default;
+    background: $grey-btn-default;
+}
+
+.addtocart__plus-btn {
+    &:hover {
+        background: $grey-btn-hover;
+
+        svg path {
+            fill: $blue-btn-hover;
+        }
+    }
+
+    &:active {
+        background: $grey-btn-active;
+
+        svg path {
+            fill: $blue-btn-active;
+        }
+    }
+}

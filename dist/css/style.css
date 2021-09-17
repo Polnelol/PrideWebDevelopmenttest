@@ -1,0 +1,333 @@
+@charset "UTF-8";
+
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+
+img {
+  max-width: 100%;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+button {
+  border: none;
+  padding: none;
+  cursor: pointer;
+  color: #FFFFFF;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.addtocart__btn {
+  width: 156px;
+  height: 44px;
+  font-size: 16px;
+  line-height: 44px;
+  font-weight: 500;
+  background-color: #1A45DB;
+}
+
+.addtocart__btn:hover {
+  background-color: #173DC2;
+}
+
+.addtocart__btn:active {
+  background-color: #1435A8;
+}
+
+.addtocart_control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 36px;
+  font-weight: 400;
+  color: #1A45DB;
+  background: #F8F8F8;
+}
+
+.addtocart__plus-btn:hover {
+  background: #F2F2F2;
+}
+
+.addtocart__plus-btn:hover svg path {
+  fill: #173DC2;
+}
+
+.addtocart__plus-btn:active {
+  background: #EDEDED;
+}
+
+.addtocart__plus-btn:active svg path {
+  fill: #1435A8;
+}
+
+.products__item-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 305px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+.products__item-wrap:nth-child(4n) {
+  margin-right: 0;
+}
+
+.products__item-img {
+  width: 100%;
+  height: 240px;
+  text-align: center;
+  line-height: 240px;
+  margin-bottom: 20px;
+}
+
+.products__item-img img {
+  vertical-align: middle;
+}
+
+.products__item-price-wrap {
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #141414;
+}
+
+.products__item-price-wrap.discount .products__item-current-price {
+  color: #FF0D55;
+  margin-right: 9px;
+}
+
+.products__item-old-price {
+  display: none;
+  position: relative;
+  color: #8F8F8F;
+}
+
+.products__item-old-price-strike {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  transform: rotate(-10deg);
+  background-color: #FF0D55;
+}
+
+.products__item-price-wrap.discount .products__item-old-price {
+  display: block;
+}
+
+.products__item-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #525252;
+}
+
+.addtocart__wrap {
+  width: 156px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.addtocart__counter {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addtocart__value-wrap {
+  color: #525252;
+  font-size: 16px;
+}
+
+.addtocart__value-wrap input {
+  width: 20px;
+  padding: 0;
+  text-align: center;
+  border: none;
+}
+
+.addtocart__wrap.active .addtocart__btn {
+  display: none;
+}
+
+.addtocart__wrap.active .addtocart__counter {
+  display: flex;
+}
+
+.products__favorite-btn {
+  position: absolute;
+  top: 45px;
+  right: 15px;
+}
+
+.products__item-wrap.favorite-active .products__favorite-btn svg path {
+  stroke: #FF0D55;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.generic-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #3D3D3D;
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.recommended-products {
+  margin: 72px 0;
+}
+
+.products__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 975px;
+  }
+
+  .products__item-wrap:nth-child(4n) {
+    margin-right: 20px;
+  }
+
+  .products__item-wrap:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 998px) {
+  .container {
+    width: 650px;
+  }
+
+  .products__item-wrap:nth-child(3n) {
+    margin-right: 20px;
+  }
+
+  .products__item-wrap:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 678px) {
+  .container {
+    width: 320px;
+  }
+
+  .products__wrap {
+    justify-content: center;
+  }
+
+  .products__item-wrap {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .products__item-wrap {
+    margin-right: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

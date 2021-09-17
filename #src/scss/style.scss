@@ -1,0 +1,34 @@
+@import "reset-custom.scss";
+@import "fonts.scss";
+@import "colors.scss";
+@import "buttons.scss";
+@import "products-item.scss";
+@import "media.scss";
+
+body {
+    font-family: $generic-font;
+}
+
+.generic-title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    color: $header-color;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.recommended-products {
+    margin: 72px 0;
+}
+
+.products__wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
